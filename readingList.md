@@ -36,3 +36,13 @@ https://arxiv.org/pdf/2208.13467
 
 **Blockchain Technology Secures Robot Swarms: Consensus Protocols and Resilience to Byzantine Robots** — Strobel et al.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7806104/
+
+**Securing Unmanned Devices in Critical Infrastructure: A Survey of Hardware, Network, and Swarm Intelligence** — Kose, Kose, Liang (Sam Houston State), Electronics 2026, 15(6), 1204
+Broad thematic survey rather than a targeted contribution, but the swarm-intelligence pillar of its taxonomy is the framing our fleet-security bullets need, and its "Resource–Security Paradox" (crypto/AI defenses cost flight endurance, and adversaries exploit that via battery-exhaustion attacks) is a clean bridge into the resource-exhaustion topic. Also touches the sim-to-real gap in AI perception and digital forensic readiness — useful as a citation map across several of our sections.
+https://www.mdpi.com/2079-9292/15/6/1204 · https://doi.org/10.3390/electronics15061204
+
+## Intrusion / Anomaly Detection for ROS 2 UAV Traffic
+
+**QUADFormer: Learning-Based Detection of Cyber Attacks in Quadrotor UAVs** — Wang, Yang, Yang, Wang, Li, Zhang, IEEE Transactions on Control Systems Technology 34(1), Jan 2026
+Transformer-based attack detection built on a residue generator, aimed squarely at the case our detection bullets care about: large outdoor maneuvering flights where the dynamics are nonlinear and the noise is non-Gaussian, which is exactly where statistics-based detectors fall over. Validated in both simulation and real flights, and it includes an alert module for safe task execution under attack, so it reaches into the resilient-control section too. Caveat: features are dynamics-side, not ROS 2 semantics — the cross-domain half of our bullet is still open.
+https://ieeexplore.ieee.org/abstract/document/11134535 · https://doi.org/10.1109/TCST.2025.3598255
